@@ -8,7 +8,7 @@ class Boxlist extends Component{
     constructor(props){
         super(props)
         this.state={data:[]}
-        axios.get('http://localhost:3002/food').then(response=>{this.setState({data:response.data})})
+        axios.get('https://glacial-stream-70990.herokuapp.com/food').then(response=>{this.setState({data:response.data})})
         
     }
 

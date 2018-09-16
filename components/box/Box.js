@@ -1,9 +1,9 @@
 import axios from 'axios'
 const Box=(props)=>{
 
-        const cart_save=()=>{axios.get('http://localhost:3002/cookie').
+        const cart_save=()=>{axios.get('https://glacial-stream-70990.herokuapp.com/cookie').
         then(response=>{
-            axios.put('http://localhost:3002/cart/add',{email:response.data,name:props.name,price:props.price,category:props.category,url:props.url})
+            axios.put('https://glacial-stream-70990.herokuapp.com/add',{email:response.data,name:props.name,price:props.price,category:props.category,url:props.url})
         })
     }
 

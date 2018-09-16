@@ -10,7 +10,7 @@ class Login extends Component{
         this.state={email:'',password:''}
     }
     login(){
-        axios.post('http://localhost:3002/login',{email:this.state.email,password:this.state.password})
+        axios.post('https://glacial-stream-70990.herokuapp.com/login',{email:this.state.email,password:this.state.password})
     }
     email(event){
         this.setState({email:event.target.value})
@@ -24,7 +24,7 @@ class Login extends Component{
             <div style={{textAlign:"center"}}>
 			<div>
 				<div class='form'>
-				<form method="POST" action='http://localhost:3002/login'>
+				<form method="POST" action='https://glacial-stream-70990.herokuapp.com/login'>
 				<label style={{fontSize: "2em"}}>LOGIN</label><br/><br/><br/>
 				<img src="https://s3.amazonaws.com/thumbnails.illustrationsource.com/huge.102.513291.JPG" alt="" width="200px" height="200px"/><br/><br/>
 				<label>Email</label><br/><br/>

@@ -18,8 +18,8 @@ class Cart extends Component{
 
 remove(id){
     console.log(id)
-    axios.get('http://localhost:3002/cookie').then(response=>{
-        axios.delete(`http://localhost:3002/cart/remove/${response.data}/${id}`)
+    axios.get('https://glacial-stream-70990.herokuapp.com/cookie').then(response=>{
+        axios.delete(`https://glacial-stream-70990.herokuapp.com/${response.data}/${id}`)
     })
     this.componentDidMount()
 }
@@ -29,10 +29,10 @@ set(data){
 }
 
 place_order(){
-    axios.get('http://localhost:3002/cookie').then(response=>{
-        this.state.data.map(item=>{axios.put(`http://localhost:3002/cart/order_placed/${response.data}`,
+    axios.get('https://glacial-stream-70990.herokuapp.com/cookie').then(response=>{
+        this.state.data.map(item=>{axios.put(`https://glacial-stream-70990.herokuapp.com/cart/order_placed/${response.data}`,
         {name:item.name,price:item.price,category:item.category,url:item.url})})
-        axios.delete(`http://localhost:3002/cart/delete_cart/${response.data}`)
+        axios.delete(`https://glacial-stream-70990.herokuapp.com/cart/delete_cart/${response.data}`)
     })
     this.setState({place_order:1})
 }
@@ -45,8 +45,8 @@ open(){
 
 componentDidMount(){
     console.log('in')
-    axios.get('http://localhost:3002/cookie').then(response=>{
-        axios.get(`http://localhost:3002/cart/cart_food/${response.data}`)
+    axios.get('https://glacial-stream-70990.herokuapp.com/cookie').then(response=>{
+        axios.get(`https://glacial-stream-70990.herokuapp.com/cart/cart_food/${response.data}`)
         .then(response=>{this.set(response.data)})
     })
 

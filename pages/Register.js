@@ -15,7 +15,7 @@ class Register extends Component{
     
     register(){
         if(this.state.password===this.state.cpassword)
-            axios.post('http://localhost:3002/register',{email:this.state.email,password:this.state.password})
+            axios.post('https://glacial-stream-70990.herokuapp.com/register',{email:this.state.email,password:this.state.password})
         else
         this.setState({err:0})
 
@@ -39,7 +39,7 @@ class Register extends Component{
                 ?
                 <div style={{textAlign:"center"}}>
 				<div class='form'>
-				<form method="POST" action='http://localhost:3002/register'>
+				<form method="POST" action='https://glacial-stream-70990.herokuapp.com/register'>
 				<label style={{fontSize: "2em"}}>REGISTER</label><br/><br/><br/>
 				<img src="https://s3.amazonaws.com/thumbnails.illustrationsource.com/huge.102.513291.JPG" alt="" width="200px" height="200px"/><br/><br/>
 				<label>Email</label><br/><br/>
@@ -59,7 +59,7 @@ class Register extends Component{
             :(
                 <div style={{textAlign:"center"}}>
 				<div class='form'>
-				<form method="POST" action='http://localhost:3002/register'>
+				<form method="POST" action='https://glacial-stream-70990.herokuapp.com/register'>
 				<label style={{fontSize: "2em"}}>REGISTER</label><br/><br/><br/>
 				<img src="https://s3.amazonaws.com/thumbnails.illustrationsource.com/huge.102.513291.JPG" alt="" width="200px" height="200px"/><br/><br/>
 				<label>Email</label><br/><br/>

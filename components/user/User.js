@@ -19,14 +19,14 @@ class User extends Component{
         this.setState({popup:'no'})
     }
     logout(){
-        axios.get('http://localhost:3002/logout').then(response=>{
+        axios.get('https://glacial-stream-70990.herokuapp.com/logout').then(response=>{
             if(response.data==='ok'){
                 console.log('ok')
             }
         })
     }
     componentDidMount(){
-        axios.get('http://localhost:3002/cookie').then(
+        axios.get('https://glacial-stream-70990.herokuapp.com/cookie').then(
             response=>{
                 if(response.data!=undefined)
                     this.setState({log:ok})
